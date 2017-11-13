@@ -1,0 +1,8 @@
+#text-over-image {
+  position: relative;
+  width: 100%;
+  top: -40px;
+  left: 40px;
+  font-size: 2em;
+  /*text-align: left;*/
+}
