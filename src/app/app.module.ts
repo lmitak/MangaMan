@@ -6,6 +6,7 @@ import { NavigationComponent } from './navigation/navigation.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { TopListComponent } from './homepage/top-list/top-list.component';
 import { TopListItemComponent } from './homepage/top-list/top-list-item/top-list-item.component';
+import { TopicComponent } from './homepage/topic/topic.component';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { TopListItemComponent } from './homepage/top-list/top-list-item/top-list
     NavigationComponent,
     HomepageComponent,
     TopListComponent,
-    TopListItemComponent
+    TopListItemComponent,
+    TopicComponent
   ],
   imports: [
     BrowserModule

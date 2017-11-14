@@ -1,4 +1,10 @@
-<p>
-  homepage works!
-</p>
-<app-top-list></app-top-list>
+<div class="row">
+  <h2>Hot topics</h2>
+  <app-topic></app-topic>
+  <app-topic></app-topic>
+  <app-topic></app-topic>
+  <a href="#" class="text-right" style="float: right">More</a>
+</div>
+<app-top-list [title]="'Trending'"></app-top-list>
+<app-top-list [title]="'Most popular'"></app-top-list>
+<p>Copyright</p>

@@ -12,6 +12,7 @@ export class TopListItemComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    console.log(this.manga);
   }
 
 }

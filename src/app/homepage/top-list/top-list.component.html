@@ -1,8 +1,19 @@
-<div class="row">
-  <h2>{{ title }}</h2>
-  <div class="column col-lg-4">
-    <img src="http://via.placeholder.com/350x300" width="300" height="300" alt="">
-    <p id="text-over-image" class="caption text-left">Manga title</p>
-    <app-top-list-item [boxSize]="300" [manga]="mangas[0]"></app-top-list-item>
-  </div>
+<h2>{{ title }}</h2>
+<div class="col-md-12">
+  <ul class="list-group list-inline">
+    <li><app-top-list-item [boxSize]="500" [manga]="mangas[0]"></app-top-list-item></li>
+    <li>
+      <ul class="list-group" style="list-style-type: none">
+        <li><app-top-list-item [boxSize]="212" [manga]="mangas[0]"></app-top-list-item></li>
+        <li><app-top-list-item [boxSize]="212" [manga]="mangas[0]"></app-top-list-item></li>
+      </ul>
+    </li>
+    <li>
+      <ul class="list-group" style="list-style-type: none">
+        <li><app-top-list-item [boxSize]="212" [manga]="mangas[0]"></app-top-list-item></li>
+        <li><app-top-list-item [boxSize]="212" [manga]="mangas[0]"></app-top-list-item></li>
+      </ul>
+    </li>
+  </ul>
+  <a href="#" class="text-right" style="float: right">More</a>
 </div>

@@ -1,3 +1,14 @@
-<p>
-  top-list-item works!
-</p>
+<a href="#" [ngStyle]="{'width': boxSize + 'px', 'height': boxSize + 'px'}">
+  <div class="thumbnail" style="overflow: hidden; overflow-clip: true">
+    <div [ngStyle]="{
+    'background-image': 'url(http://via.placeholder.com/550x500)',
+    'width': boxSize + 'px',
+    'height': boxSize + 'px'
+    }"
+    class="img-responsive background-center">
+      <!--<img src="http://via.placeholder.com/350x300" width="{{ boxSize }}" height="{{ boxSize }}" alt="">-->
+    </div>
+    <p id="text-over-image">{{ manga.title }}</p>
+  </div>
+</a>
+
