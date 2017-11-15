@@ -1,0 +1,8 @@
+<div class="col-md-12" style="overflow: hidden">
+  <h1>Hot releases</h1>
+  <div id="releases-container" [ngStyle]="{'width': (mangas.length * 250) + 'px'}">
+    <ul class="list-group list-inline" id="releases-list">
+      <li *ngFor="let i of mangas"><app-hot-releases-item ></app-hot-releases-item></li>
+    </ul>
+  </div>
+</div>

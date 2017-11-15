@@ -7,6 +7,9 @@ import { HomepageComponent } from './homepage/homepage.component';
 import { TopListComponent } from './homepage/top-list/top-list.component';
 import { TopListItemComponent } from './homepage/top-list/top-list-item/top-list-item.component';
 import { TopicComponent } from './homepage/topic/topic.component';
+import { HotReleasesComponent } from './homepage/hot-releases/hot-releases.component';
+import { HotReleasesItemComponent } from './homepage/hot-releases/hot-releases-item/hot-releases-item.component';
+import {CommonModule} from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -15,10 +18,13 @@ import { TopicComponent } from './homepage/topic/topic.component';
     HomepageComponent,
     TopListComponent,
     TopListItemComponent,
-    TopicComponent
+    TopicComponent,
+    HotReleasesComponent,
+    HotReleasesItemComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    CommonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

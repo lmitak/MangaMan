@@ -1,0 +1,10 @@
+#releases-container {
+  height: 700px;
+}
+#releases-list {
+  padding: 0;
+  margin: 0;
+}
+#releases-list li {
+  padding: 0;
+}

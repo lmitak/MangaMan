@@ -1,0 +1,18 @@
+#hot-release-block {
+  width: 250px;
+  height: 700px;
+  overflow: hidden;
+}
+
+#hot-release-image {
+  width: 250px;
+  height: 650px;
+}
+p {
+  font-size: 18pt;
+}
+.background-center {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
