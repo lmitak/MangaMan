@@ -10,6 +10,13 @@ import { TopicComponent } from './homepage/topic/topic.component';
 import { HotReleasesComponent } from './homepage/hot-releases/hot-releases.component';
 import { HotReleasesItemComponent } from './homepage/hot-releases/hot-releases-item/hot-releases-item.component';
 import {CommonModule} from '@angular/common';
+import {RouterModule, Routes} from '@angular/router';
+import { MangaComponent } from './manga/manga.component';
+
+const routes: Routes = [
+  {path: '', component: HomepageComponent},
+  {path: ':manga', component: MangaComponent}
+];
 
 @NgModule({
   declarations: [
@@ -20,11 +27,13 @@ import {CommonModule} from '@angular/common';
     TopListItemComponent,
     TopicComponent,
     HotReleasesComponent,
-    HotReleasesItemComponent
+    HotReleasesItemComponent,
+    MangaComponent
   ],
   imports: [
     BrowserModule,
-    CommonModule
+    CommonModule,
+    RouterModule.forRoot(routes)
   ],
   providers: [],
   bootstrap: [AppComponent]
