@@ -13,7 +13,6 @@ export class TopListItemComponent implements OnInit {
   constructor(private router: Router) { }
 
   ngOnInit() {
-    console.log(this.manga);
   }
 
   onClick() {

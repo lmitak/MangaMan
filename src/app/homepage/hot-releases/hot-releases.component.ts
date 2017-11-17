@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {NgxCarousel} from 'ngx-carousel';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-hot-releases',
@@ -9,9 +10,8 @@ import {NgxCarousel} from 'ngx-carousel';
 export class HotReleasesComponent implements OnInit {
   public carousel: NgxCarousel;
   public mangas: Array<any>;
-  public hasMouseMoved = false;
-  public isMouseClicked = false;
-  constructor() { }
+  public clickDuration: number;
+  constructor(private router: Router) { }
 
   ngOnInit() {
     this.mangas = [1, 2, 3, 4, 5, 6, 7, 8, 9];
@@ -38,20 +38,23 @@ export class HotReleasesComponent implements OnInit {
     }
   }
   public mouseDownEvent() {
-    this.isMouseClicked = true;
-  }
-  public mouseMoveEvent() {
-    if (this.isMouseClicked) {
-      this.hasMouseMoved = true;
-    }
+    const currentDate = new Date();
+    this.clickDuration = currentDate.getTime();
   }
   public mouseUpEvent() {
-    if (this.hasMouseMoved) {
-      console.log('drag');
-    } else {
-      console.log('click');
+    const currentDate = new Date();
+    this.clickDuration = currentDate.getTime() - this.clickDuration;
+    console.log(this.clickDuration);
+    if (this.isClickEvent()) {
+      this.router.navigate(['One Piece/42']);
     }
-    this.hasMouseMoved = false;
-    this.isMouseClicked = false;
+  }
+
+  private isClickEvent(): boolean {
+    const CLICK_MAX_MOVEMENT_DURATION = 100;
+    if (this.clickDuration < CLICK_MAX_MOVEMENT_DURATION) {
+      return true;
+    }
+    return false;
   }
 }

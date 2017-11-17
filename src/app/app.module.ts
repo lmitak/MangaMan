@@ -14,10 +14,12 @@ import { HotReleasesItemComponent } from './homepage/hot-releases/hot-releases-i
 import {CommonModule} from '@angular/common';
 import {RouterModule, Routes} from '@angular/router';
 import { MangaComponent } from './manga/manga.component';
+import { ChapterComponent } from './chapter/chapter.component';
 
 const routes: Routes = [
   {path: '', component: HomepageComponent},
-  {path: ':manga', component: MangaComponent}
+  {path: ':manga', component: MangaComponent},
+  {path: ':manga/:chapterNumber', component: ChapterComponent}
 ];
 
 @NgModule({
@@ -30,7 +32,8 @@ const routes: Routes = [
     TopicComponent,
     HotReleasesComponent,
     HotReleasesItemComponent,
-    MangaComponent
+    MangaComponent,
+    ChapterComponent
   ],
   imports: [
     BrowserModule,
