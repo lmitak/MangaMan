@@ -1,13 +1,16 @@
-<div class="row">
-  <app-hot-releases></app-hot-releases>
-  <h2>Hot topics</h2>
-  <app-topic></app-topic>
-  <app-topic></app-topic>
-  <app-topic></app-topic>
-  <a href="#" class="text-right" style="float: right; font-size: 18pt">More</a>
+<app-hot-releases></app-hot-releases>
+<div class="container">
+  <div class="row">
+    <h2>Hot topics</h2>
+    <app-topic></app-topic>
+    <app-topic></app-topic>
+    <app-topic></app-topic>
+    <a href="#" class="text-right" style="float: right; font-size: 18pt">More</a>
+  </div>
+  <app-top-list [title]="'Trending'"></app-top-list>
+  <app-top-list [title]="'Most popular'"></app-top-list>
+  <footer>
+    <p>Copyright</p>
+  </footer>
 </div>
-<app-top-list [title]="'Trending'"></app-top-list>
-<app-top-list [title]="'Most popular'"></app-top-list>
-<footer>
-  <p>Copyright</p>
-</footer>
+
