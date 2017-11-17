@@ -1,8 +1,37 @@
-<div class="col-md-12" style="overflow: hidden">
-  <h1>Hot releases</h1>
-  <div id="releases-container" [ngStyle]="{'width': (mangas.length * 250) + 'px'}">
-    <ul class="list-group list-inline" id="releases-list">
-      <li *ngFor="let i of mangas"><app-hot-releases-item ></app-hot-releases-item></li>
-    </ul>
-  </div>
-</div>
+<!--<div class="col-md-12" style="overflow: hidden">-->
+  <!--<h1>Hot releases</h1>-->
+  <!--<div id="releases-container" [ngStyle]="{'width': (mangas.length * 250) + 'px'}">-->
+    <!--<ul class="list-group list-inline" id="releases-list">-->
+      <!--<li *ngFor="let i of mangas"><app-hot-releases-item ></app-hot-releases-item></li>-->
+    <!--</ul>-->
+  <!--</div>-->
+<!--</div>-->
+
+<h1>Hot releases</h1>
+<ngx-carousel
+  [inputs]="carousel"
+  (carouselLoad)="carouselLoad($event)">
+  <ngx-tile NgxCarouselItem *ngFor="let manga of mangas" (mousedown)="mouseDownEvent()" (mousemove)="mouseMoveEvent()" (mouseup)="mouseUpEvent()">
+    <div class="carousel-tile">
+      <div
+        [ngStyle]="{'background-image': 'url(../../../assets/test.jpg)'}"
+        class="img-responsive background-center manga-cover">
+      </div>
+      <p id="manga-cover-name">One Punch Man</p>
+    </div>
+  </ngx-tile>
+  <button NgxCarouselPrev class='leftRs'>&lt;</button>
+  <button NgxCarouselNext class='rightRs'>&gt;</button>
+</ngx-carousel>
+
+<!--<ngx-carousel-->
+  <!--[inputs]="carousel"-->
+  <!--(carouselLoad)="carouselLoad($event)">-->
+
+  <!--<ngx-tile NgxCarouselItem *ngFor="let Tile of mangas">-->
+    <!--<h1>{{Tile + 1}}</h1>-->
+  <!--</ngx-tile>-->
+
+  <!--<button NgxCarouselPrev class='leftRs'>&lt;</button>-->
+  <!--<button NgxCarouselNext class='rightRs'>&gt;</button>-->
+<!--</ngx-carousel>-->

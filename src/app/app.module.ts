@@ -1,5 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { NgxCarouselModule} from 'ngx-carousel';
+import 'hammerjs';
 
 import { AppComponent } from './app.component';
 import { NavigationComponent } from './navigation/navigation.component';
@@ -33,7 +35,8 @@ const routes: Routes = [
   imports: [
     BrowserModule,
     CommonModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    NgxCarouselModule
   ],
   providers: [],
   bootstrap: [AppComponent]
