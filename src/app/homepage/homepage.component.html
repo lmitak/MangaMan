@@ -7,8 +7,8 @@
     <app-topic></app-topic>
     <a href="#" class="text-right" style="float: right; font-size: 18pt">More</a>
   </div>
-  <app-top-list [title]="'Trending'"></app-top-list>
-  <app-top-list [title]="'Most popular'"></app-top-list>
+  <app-top-list [title]="'Trending'" [mangas]="top10PopularManga"></app-top-list>
+  <app-top-list [title]="'Most popular'" [mangas]="top10RatedManga"></app-top-list>
   <footer>
     <p>Copyright</p>
   </footer>

@@ -1,7 +1,7 @@
 <a [routerLink]="'/' + manga.title" [ngStyle]="{'width': boxSize + 'px', 'height': boxSize + 'px'} ">
   <div class="thumbnail" style="overflow: hidden;">
     <div [ngStyle]="{
-    'background-image': 'url(http://via.placeholder.com/550x500)',
+    'background-image': 'url(' + manga.imagePath + ')',
     'width': boxSize + 'px',
     'height': boxSize + 'px'
     }"

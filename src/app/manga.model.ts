@@ -6,14 +6,14 @@ export class Manga {
   public publisher: string;
   public author: string;
   public imagePath: string;
-  public chapters: [Chapter];
+  public chapters: Chapter[];
 
   constructor(title: string,
               description: string,
               publisher: string,
               author: string,
               imagePath: string,
-              chapters: [Chapter]) {
+              chapters: Chapter[]) {
     this.title = title;
     this.description = description;
     this.publisher = publisher;

@@ -9,13 +9,9 @@ import {Chapter} from '../../chapter.model';
 })
 export class TopListComponent implements OnInit {
   @Input() title: string;
-  mangas = [];
+  @Input() mangas: Manga[];
   constructor() { }
   ngOnInit() {
-    let chapter1 = new Chapter('chapter', 'asdfsdfa adffadjsfjakse fdsafdsaf', 32000, '');
-    let manga1 = new Manga('One Piece', 'loremipsum dolor sit amet amethus', 'awasana', 'awasana', '', [chapter1]);
-    this.mangas.push(manga1);
-    console.log(this.mangas);
   }
 
 }
