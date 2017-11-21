@@ -5,14 +5,50 @@ import {Chapter} from '../chapter.model';
 @Injectable()
 export class MangaService {
   private mangas: Manga[] = [
-    new Manga('One Piece',
-      'loremipsum dolor sit amet amethus',
-      'awasana',
-      'awasana',
-      'https://dncache-mauganscorp.netdna-ssl.com/thumbseg/1662/1662937-bigthumbnail.jpg',
-      [
-        new Chapter('chapter', 'asdfsdfa adffadjsfjakse fdsafdsaf', 32000, '')
-      ]
+    new Manga(
+      {
+        title: 'One Piece',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sagittis eu lorem ac dignissim. Nam.',
+        author: 'Aganagi',
+        publisher: 'JStudio',
+        imagePath: 'https://dncache-mauganscorp.netdna-ssl.com/thumbseg/1662/1662937-bigthumbnail.jpg'
+      }
+    ),
+    new Manga(
+      {
+        title: 'Bleach',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sagittis eu lorem ac dignissim. Nam.',
+        author: 'Aganagi',
+        publisher: 'JStudio',
+        imagePath: '../../assets/bleach.jpg'
+      }
+    ),
+    new Manga(
+      {
+        title: 'Boku no hero academia',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sagittis eu lorem ac dignissim. Nam.',
+        author: 'Aganagi',
+        publisher: 'JStudio',
+        imagePath: '../../assets/bokuNoHeroAcademia.jpg'
+      }
+    ),
+    new Manga(
+      {
+        title: 'Naruto Shipudden',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sagittis eu lorem ac dignissim. Nam.',
+        author: 'Aganagi',
+        publisher: 'JStudio',
+        imagePath: '../../assets/narutoShipudden.jpg'
+      }
+    ),
+    new Manga(
+      {
+        title: 'Haikyuu',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sagittis eu lorem ac dignissim. Nam.',
+        author: 'Aganagi',
+        publisher: 'JStudio',
+        imagePath: '../../assets/Haikyuu!!.full.1888707.jpg'
+      }
     )
   ];
   constructor() { }
