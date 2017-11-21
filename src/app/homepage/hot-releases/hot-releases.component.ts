@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {NgxCarousel} from 'ngx-carousel';
 import { Router } from '@angular/router';
+import {GestureRecognizer} from '../../shared/GestureRecognizer';
 
 @Component({
   selector: 'app-hot-releases',
@@ -10,7 +11,7 @@ import { Router } from '@angular/router';
 export class HotReleasesComponent implements OnInit {
   public carousel: NgxCarousel;
   public mangas: Array<any>;
-  public clickDuration: number;
+  private gesture: GestureRecognizer;
   constructor(private router: Router) { }
 
   ngOnInit() {
@@ -28,6 +29,7 @@ export class HotReleasesComponent implements OnInit {
       animation: 'lazy',
       easing: 'ease'
     };
+    this.gesture = new GestureRecognizer();
   }
   public carouselLoad(event: any) {
     const len = this.mangas.length;
@@ -37,24 +39,14 @@ export class HotReleasesComponent implements OnInit {
       }
     }
   }
-  public mouseDownEvent() {
-    const currentDate = new Date();
-    this.clickDuration = currentDate.getTime();
-  }
-  public mouseUpEvent() {
-    const currentDate = new Date();
-    this.clickDuration = currentDate.getTime() - this.clickDuration;
-    console.log(this.clickDuration);
-    if (this.isClickEvent()) {
-      this.router.navigate(['One Piece/42']);
-    }
+  public mouseDownEvent(event: MouseEvent) {
+    this.gesture.mouseDownEvent = event;
   }
 
-  private isClickEvent(): boolean {
-    const CLICK_MAX_MOVEMENT_DURATION = 100;
-    if (this.clickDuration < CLICK_MAX_MOVEMENT_DURATION) {
-      return true;
+  public mouseUpEvent(event: MouseEvent) {
+    this.gesture.mouseUpEvent = event;
+    if (this.gesture.isClickEvent()) {
+      this.router.navigate(['One Piece/42']);
     }
-    return false;
   }
 }

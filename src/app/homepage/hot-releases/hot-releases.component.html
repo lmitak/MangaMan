@@ -9,7 +9,7 @@
 <ngx-carousel
   [inputs]="carousel"
   (carouselLoad)="carouselLoad($event)">
-  <ngx-tile NgxCarouselItem *ngFor="let manga of mangas" (mousedown)="mouseDownEvent()" (mouseup)="mouseUpEvent()">
+  <ngx-tile NgxCarouselItem *ngFor="let manga of mangas" (mousedown)="mouseDownEvent($event)" (mouseup)="mouseUpEvent($event)">
     <div class="carousel-tile">
       <div
         [ngStyle]="{'background-image': 'url(../../../assets/OnePunchMan_manga_cover.png)'}"
