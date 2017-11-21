@@ -1,6 +1,7 @@
 import {Chapter} from './chapter.model';
 import { isUndefined } from 'util';
 export interface IManga {
+  id: number;
   title: string;
   description: string;
   publisher: string;
@@ -17,8 +18,10 @@ export class Manga {
   public imagePath: string;
   public chapters: Chapter[];
   public rating: number;
+  public id: number;
 
   constructor(manga: IManga) {
+    this.id = manga.id;
     this.title = manga.title;
     this.description = manga.description;
     this.publisher = manga.publisher;

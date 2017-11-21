@@ -10,6 +10,7 @@ import {Router} from '@angular/router';
 export class TopListItemComponent implements OnInit {
   @Input() boxSize: number;
   @Input() manga: Manga;
+  @Input() mangaIndex: number;
   constructor(private router: Router) { }
 
   ngOnInit() {

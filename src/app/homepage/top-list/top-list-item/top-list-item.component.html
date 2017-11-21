@@ -1,4 +1,4 @@
-<a [routerLink]="'/' + manga.title" [ngStyle]="{'width': boxSize + 'px', 'height': boxSize + 'px'} ">
+<a [routerLink]="['/mangas', manga.title]" [ngStyle]="{'width': boxSize + 'px', 'height': boxSize + 'px'} ">
   <div class="thumbnail" style="overflow: hidden;">
     <div [ngStyle]="{
     'background-image': 'url(' + manga.imagePath + ')',

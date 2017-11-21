@@ -18,8 +18,8 @@ import { ChapterComponent } from './chapter/chapter.component';
 
 const routes: Routes = [
   {path: '', component: HomepageComponent},
-  {path: ':manga', component: MangaComponent},
-  {path: ':manga/:chapterNumber', component: ChapterComponent}
+  {path: 'mangas/:manga', component: MangaComponent},
+  {path: 'mangas/:manga/chapters/:chapterNumber', component: ChapterComponent}
 ];
 
 @NgModule({

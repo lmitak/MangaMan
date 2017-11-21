@@ -7,6 +7,7 @@ export class MangaService {
   private mangas: Manga[] = [
     new Manga(
       {
+        id: 0,
         title: 'One Piece',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sagittis eu lorem ac dignissim. Nam.',
         author: 'Aganagi',
@@ -16,6 +17,7 @@ export class MangaService {
     ),
     new Manga(
       {
+        id: 1,
         title: 'Bleach',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sagittis eu lorem ac dignissim. Nam.',
         author: 'Aganagi',
@@ -25,6 +27,7 @@ export class MangaService {
     ),
     new Manga(
       {
+        id: 2,
         title: 'Boku no hero academia',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sagittis eu lorem ac dignissim. Nam.',
         author: 'Aganagi',
@@ -34,6 +37,7 @@ export class MangaService {
     ),
     new Manga(
       {
+        id: 3,
         title: 'Naruto Shipudden',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sagittis eu lorem ac dignissim. Nam.',
         author: 'Aganagi',
@@ -43,6 +47,7 @@ export class MangaService {
     ),
     new Manga(
       {
+        id: 4,
         title: 'Haikyuu',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sagittis eu lorem ac dignissim. Nam.',
         author: 'Aganagi',
@@ -59,6 +64,14 @@ export class MangaService {
 
   public getManga(index: number): Manga {
     return this.mangas[index];
+  }
+  public getMangaByName(name: string): Manga {
+    const mangas = this.getMangas();
+    for (let manga of mangas) {
+      if (manga.title === name) {
+        return manga;
+      }
+    }
   }
   // getMangaOrderedByPopularity
   // getTop10PopularManga

@@ -17,5 +17,4 @@ export class HomepageComponent implements OnInit {
     this.top10PopularManga = this.mangaService.getMangas();
     this.top10RatedManga = this.mangaService.getMangas();
   }
-
 }
