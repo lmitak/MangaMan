@@ -46,7 +46,7 @@ export class HotReleasesComponent implements OnInit {
   public mouseUpEvent(event: MouseEvent) {
     this.gesture.mouseUpEvent = event;
     if (this.gesture.isClickEvent()) {
-      this.router.navigate(['One Piece/42']);
+      this.router.navigate(['mangas/One Piece/chapters/42']);
     }
   }
 }
