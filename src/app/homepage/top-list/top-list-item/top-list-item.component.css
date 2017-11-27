@@ -1,7 +1,43 @@
 p {
   font-size: 18pt;
 }
-.background-center {
+.flex-container {
+  overflow: hidden;
+}
+.background-center2 {
   background-repeat: no-repeat;
   background-position: center;
+  background-size: cover;
+
+}
+#text-over-image {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: #b9b9b9;
+}
+
+p {
+  font-size: 18pt;
+}
+.manga-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.top-component-container {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+
+.manga-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background-color: rgba(40, 40, 40, 0.8);
+  color: whitesmoke;
 }

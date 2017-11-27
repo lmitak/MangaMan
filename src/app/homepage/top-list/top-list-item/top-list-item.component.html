@@ -1,14 +1,32 @@
-<a [routerLink]="['/mangas', manga.title]" [ngStyle]="{'width': boxSize + 'px', 'height': boxSize + 'px'} ">
-  <div class="thumbnail" style="overflow: hidden;">
-    <div [ngStyle]="{
-    'background-image': 'url(' + manga.imagePath + ')',
-    'width': boxSize + 'px',
-    'height': boxSize + 'px'
-    }"
-    class="img-responsive background-center">
-      <!--<img src="http://via.placeholder.com/350x300" width="{{ boxSize }}" height="{{ boxSize }}" alt="">-->
+<!--<a [routerLink]="['/mangas', manga.title]" [ngStyle]="{'width': boxSize + 'px', 'height': boxSize + 'px'} ">-->
+  <!--<div class="thumbnail" style="overflow: hidden;">-->
+    <!--<div [ngStyle]="{-->
+    <!--'background-image': 'url(' + manga.imagePath + ')',-->
+    <!--'width': boxSize + 'px',-->
+    <!--'height': boxSize + 'px'-->
+    <!--}"-->
+    <!--class="img-responsive background-center">-->
+      <!--&lt;!&ndash;<img src="http://via.placeholder.com/350x300" width="{{ boxSize }}" height="{{ boxSize }}" alt="">&ndash;&gt;-->
+    <!--</div>-->
+    <!--<p id="text-over-image">{{ manga.title }}</p>-->
+  <!--</div>-->
+<!--</a>-->
+<!--<div class="flex-container" [ngStyle]="{'width': boxSize + 'px', 'height': boxSize + 'px'}">-->
+  <!--<div class="manga-container">-->
+    <!--<a [routerLink]="['/mangas', manga.title]" >-->
+      <!--<div [ngStyle]="{-->
+      <!--'background-image': 'url(' + manga.imagePath + ')', 'width': boxSize + 'px', 'height': boxSize + 'px'}"-->
+           <!--class="img-responsive background-center2">-->
+      <!--</div>-->
+      <!--<p id="text-over-image">{{ manga.title }}</p>-->
+    <!--</a>-->
+  <!--</div>-->
+<!--</div>-->
+<a [routerLink]="['/mangas', manga.title]" >
+  <div class="img-responsive top-component-container"
+       [ngStyle]="{'background-image': 'url(' + manga.imagePath + ')', 'width': boxSize + 'px', 'height': boxSize + 'px'}">
+    <div class="manga-content">
+      <p>{{ manga.title }}</p>
     </div>
-    <p id="text-over-image">{{ manga.title }}</p>
   </div>
 </a>
-
